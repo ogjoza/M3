@@ -1,0 +1,17 @@
+﻿@model Menzy.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Food.Name</h2>
+@if (Model.Customers.Count == 0)
+{
+    <text>Niko do ve to neje jel.</text>
+}
+<ul>
+    @foreach (var customer in Model.Customers)
+    {
+        <li>@customer.Name</li>
+    }
+</ul>

@@ -1,0 +1,15 @@
+﻿@model Menzy.Models.Customer
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<ul>
+    <li>Redovni student: @Model.Redovni</li>
+    @if (Model.Birthdate.HasValue)
+    {
+<li>Datum rođenja:@Model.Birthdate.Value.ToShortDateString()</li>
+    }
+</ul>
